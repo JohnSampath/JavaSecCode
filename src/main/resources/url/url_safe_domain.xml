@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<domains>
+    <safedomains>
+        <!-- Support first-level domain name or multi-level domain name -->
+        <domain>pchack.com</domain>
+        <domain>pchack.org</domain>
+        <domain>test.pchack.org</domain>
+        <domain>localhost</domain>
+    </safedomains>
+
+    <!-- Support first-level domain name or multi-level domain name -->
+    <blockdomains>
+        <domain>baidu.com</domain>
+        <domain>evil.pchack.org</domain>
+    </blockdomains>
+
+</domains>
