@@ -24,7 +24,7 @@ Sort by letter.
 
 - [Actuators to RCE](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/resources/logback-online.xml)
 - [CommandInject](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/CommandInject.java)
-- [CORS](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/CORS.java)
+- [CORS](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/Cors.java)
 - [CRLF Injection](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/CRLFInjection.java)
 - [CSRF](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/security/WebSecurityConfig.java)
 - [Deserialize](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/Deserialize.java)
