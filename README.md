@@ -1,7 +1,7 @@
-# Java Sec Code
+# Java Security Code
 
 
-Java sec code is a very powerful and friendly project for learning Java vulnerability code.
+Java Security code is a very useful and friendly project for learning Java vulnerability code.
 
 
 ## Introduce
@@ -22,100 +22,66 @@ pchack/pchack123
 
 Sort by letter.
 
-- [Actuators to RCE](https://github.com/pchack93/java-sec-code/blob/master/src/main/resources/logback-online.xml)
-- [CommandInject](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/controller/CommandInject.java)
-- [CORS](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/controller/CORS.java)
-- [CRLF Injection](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/controller/CRLFInjection.java)
-- [CSRF](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/security/WebSecurityConfig.java)
-- [Deserialize](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/controller/Deserialize.java)
-- [Fastjson](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/controller/Fastjson.java)
-- [File Upload](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/controller/FileUpload.java)
-- [GetRequestURI](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/controller/GetRequestURI.java)
-- [IP Forge](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/controller/IPForge.java)
-- [Java RMI](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/RMI/Server.java)
-- [JSONP](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/controller/Jsonp.java)
-- [Log4j](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/controller/Log4j.java)
-- [ooxmlXXE](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/controller/othervulns/ooxmlXXE.java)
-- [PathTraversal](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/controller/PathTraversal.java)
-- [RCE](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/controller/Rce.java)
-  - Runtime
-  - ProcessBuilder
-  - ScriptEngine
-  - Yaml Deserialize  
-  - Groovy
-- [Swagger](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/config/SwaggerConfig.java)
-- [SpEL](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/controller/SpEL.java)
-- [SQL Injection](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/controller/SQLI.java)
-- [SSRF](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/controller/SSRF.java)
-- [SSTI](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/controller/SSTI.java)
-- [URL Redirect](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/controller/URLRedirect.java)
+- [Actuators to RCE](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/resources/logback-online.xml)
+- [CommandInject](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/CommandInject.java)
+- [CORS](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/CORS.java)
+- [CRLF Injection](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/CRLFInjection.java)
+- [CSRF](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/security/WebSecurityConfig.java)
+- [Deserialize](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/Deserialize.java)
+- [Fastjson](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/Fastjson.java)
+- [File Upload](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/FileUpload.java)
+- [GetRequestURI](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/GetRequestURI.java)
+- [IP Forge](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/IPForge.java)
+- [Java RMI](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/RMI/Server.java)
+- [Log4j](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/Log4j.java)
+- [PathTraversal](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/PathTraversal.java)
+- [Swagger](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/config/SwaggerConfig.java)
+- [SpEL](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/SpEL.java)
+- [SQL Injection](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/SQLI.java)
+- [SSRF](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/SSRF.java)
+- [SSTI](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/SSTI.java)
+- [URL Redirect](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/URLRedirect.java)
 - [URL whitelist Bypass](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/URLWhiteList.java)
-- [xlsxStreamerXXE](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/controller/othervulns/xlsxStreamerXXE.java)
-- [XSS](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/controller/XSS.java)
-- [XStream](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/controller/XStreamRce.java)
-- [XXE](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/controller/XXE.java)
+- [xlsxStreamerXXE](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/othervulns/xlsxStreamerXXE.java)
+- [XSS](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/XSS.java)
+- [XStream](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/XStreamRce.java)
+- [XXE](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/XXE.java)
 
 
 
 ## Vulnerability Description
 
-- [Actuators to RCE](https://github.com/pchack93/java-sec-code/wiki/Actuators-to-RCE)
-- [CORS](https://github.com/pchack93/java-sec-code/wiki/CORS)
-- [CSRF](https://github.com/pchack93/java-sec-code/wiki/CSRF)
-- [Deserialize](https://github.com/pchack93/java-sec-code/wiki/Deserialize)
-- [Fastjson](https://github.com/pchack93/java-sec-code/wiki/Fastjson)
-- [Java RMI](https://github.com/pchack93/java-sec-code/wiki/Java-RMI)
-- [JSONP](https://github.com/pchack93/java-sec-code/wiki/JSONP)
-- [POI-OOXML XXE](https://github.com/pchack93/java-sec-code/wiki/Poi-ooxml-XXE)
-- [SQLI](https://github.com/pchack93/java-sec-code/wiki/SQL-Inject)
-- [SSRF](https://github.com/pchack93/java-sec-code/wiki/SSRF)
-- [SSTI](https://github.com/pchack93/java-sec-code/wiki/SSTI)
-- [URL whitelist Bypass](https://github.com/JohnSampath/JavaSecCode/wiki/URL-whitelist-Bypass)
-- [XXE](https://github.com/pchack93/java-sec-code/wiki/XXE)
-- [Others](https://github.com/pchack93/java-sec-code/wiki/others)
+- [Actuators to RCE](https://github.com/JohnSampath/JavaSecCode/wiki/Actuators-to-RCE)
+- [CORS](https://github.com/JohnSampath/JavaSecCode/wiki/CORS)
+- [CSRF](https://github.com/JohnSampath/JavaSecCode/wiki/CSRF)
+- [Deserialize](https://github.com/JohnSampath/JavaSecCode/wiki/Deserialize)
+- [Java RMI](https://github.com/JohnSampath/JavaSecCode/wiki/Java-RMI)
+- [SQLI](https://github.com/JohnSampath/JavaSecCode/wiki/SQL-Inject)
+- [SSRF](https://github.com/JohnSampath/JavaSecCode/wiki/SSRF)
+- [SSTI](https://github.com/JohnSampath/JavaSecCode/wiki/SSTI)
+- [URL whitelist Bypass](https://github.com/JohnSampath/JavaSecCode/wiki/URL-whtielist-Bypass)
+- [XXE](https://github.com/JohnSampath/JavaSecCode/wiki/XXE)
+- [Others](https://github.com/JohnSampath/JavaSecCode/wiki/others)
 
 ## How to run
 
 The application will use mybatis auto-injection. Please run mysql server ahead of time and configure the mysql server database's name and username/password except docker environment.
 
 ``` 
-spring.datasource.url=jdbc:mysql://127.0.0.1:3306/java_sec_code
-spring.datasource.username=root
-spring.datasource.password=woshishujukumima
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.username=sa
+spring.datasource.password=password
+spring.datasource.driver-class-name=org.h2.Driver
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
 ```
 
-- Docker
-- IDEA
+- IDEA/STS
 - Tomcat
 - JAR
 
-### Docker
-
-
-Start docker:
-
-``` 
-docker-compose pull
-docker-compose up
-```
-
-
-Stop docker:
-
-```
-docker-compose down
-```
-
-Docker's environment:
-
-- Java 1.8.0_102
-- Mysql 8.0.17
-- Tomcat 8.5.11
-
-
 ### IDEA
 
-- `git clone https://github.com/pchack93/java-sec-code`
+- `git clone https://github.com/JohnSampath/JavaSecCode`
 - Open in IDEA and click `run` button.
 
 Example:
@@ -132,7 +98,7 @@ Viarus
 
 ### Tomcat
 
-- `git clone https://github.com/pchack93/java-sec-code` & `cd java-sec-code`
+- `git clone https://github.com/JohnSampath/JavaSecCode` & `cd JavaSecCode`
 - Build war package by `mvn clean package`.
 - Copy war package to tomcat webapps directory.
 - Start tomcat application.
@@ -164,8 +130,8 @@ Change `war` to `jar` in `pom.xml`.
 Build package and run.
 
 ```
-git clone https://github.com/pchack93/java-sec-code
-cd java-sec-code
+git clone https://github.com/JohnSampath/JavaSecCode
+cd JavaSecCode
 mvn clean package -DskipTests 
 java -jar target/java-sec-code-1.0.0.jar
 ```
@@ -191,3 +157,5 @@ pchack/pchack123
 
 Tomcat's default JSESSION session is valid for 30 minutes, so a 30-minute non-operational session will expire. In order to solve this problem, the rememberMe function is introduced, and the default expiration time is 2 weeks.
 
+
+## Contributors
