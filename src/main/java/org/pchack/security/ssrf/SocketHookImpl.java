@@ -15,7 +15,6 @@ import java.net.*;
 /**
  * Socket impl
  *
- * @author liergou @ 2020-04-02 23:39
  */
 public class SocketHookImpl extends SocketImpl implements SocketOptions {
 

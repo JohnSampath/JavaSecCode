@@ -16,7 +16,6 @@ import java.net.SocketImplFactory;
 /**
  * socket factory impl
  *
- * @author liergou @ 2020-04-03 23:41
  */
 public class SocketHookFactory implements SocketImplFactory {
 

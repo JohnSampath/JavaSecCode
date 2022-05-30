@@ -9,7 +9,6 @@ import java.util.ArrayList;
 /**
  * Solve can't get value in filter by @Value when not using embed tomcat.
  *
- * @author pchack @2019-07-24
  */
 @Component // The annotation @Component indicates that the WebConfig class will be scanned and assembled by the SpringIoC container, and the bean name is webConfig
 public class WebConfig {

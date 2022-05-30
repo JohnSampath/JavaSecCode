@@ -8,7 +8,6 @@ import java.net.SocketException;
 /**
  * Socket Hook switch
  *
- * @author liergou @ 2020-04-04 02:12
  */
 public class SocketHook {
 

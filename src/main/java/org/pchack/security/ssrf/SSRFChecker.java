@@ -27,7 +27,7 @@ public class SSRFChecker {
         try {
             String host = SecurityUtil.gethost(url);
 
-            // 必须http/https
+            // must be http/https
             if (!SecurityUtil.isHttp(url)) {
                 return false;
             }
@@ -48,41 +48,42 @@ public class SSRFChecker {
     }
 
     /**
-     * 解析url的ip，判断ip是否是内网ip，所以TTL设置为0的情况不适用。
-     * url只允许https或者http，并且设置默认连接超时时间。
-     * 该修复方案会主动请求重定向后的链接。
+     * Parse the ip of the url to determine whether the ip is an intranet ip, so the case where the TTL is set to 0 is not applicable.
+     * The url only allows https or http, and sets the default connection timeout.
+     * The fix actively requests the redirected link.
      *
-     * @param url        check的url
-     * @param checkTimes 设置重定向检测的最大次数，建议设置为10次
-     * @return 安全返回true，危险返回false
+     * @param url        check url
+     * @param checkTimes Set the maximum number of redirect detections, it is recommended to set it to 10 times
+
+     * @return Returns true for safe, false for danger
      */
     public static boolean checkSSRF(String url, int checkTimes) {
 
         HttpURLConnection connection;
-        int connectTime = 5 * 1000;  // 设置连接超时时间5s
+        int connectTime = 5 * 1000;  // Set the connection timeout to 5s
         int i = 1;
         String finalUrl = url;
         try {
             do {
-                // 判断当前请求的URL是否是内网ip
+                // Determine whether the currently requested URL is an intranet ip
                 if (isInternalIpByUrl(finalUrl)) {
                     logger.error("[-] SSRF check failed. Dangerous url: " + finalUrl);
-                    return false;  // 内网ip直接return，非内网ip继续判断是否有重定向
+                    return false;  // The intranet ip returns directly, and the non-intranet ip continues to judge whether there is a redirect
                 }
 
                 connection = (HttpURLConnection) new URL(finalUrl).openConnection();
                 connection.setInstanceFollowRedirects(false);
-                connection.setUseCaches(false); // 设置为false，手动处理跳转，可以拿到每个跳转的URL
+                connection.setUseCaches(false); // Set to false, handle the jump manually, you can get the URL of each jump
                 connection.setConnectTimeout(connectTime);
                 //connection.setRequestMethod("GET");
                 connection.connect(); // send dns request
-                int responseCode = connection.getResponseCode(); // 发起网络请求
+                int responseCode = connection.getResponseCode(); // initiate a network request
                 if (responseCode >= 300 && responseCode <= 307 && responseCode != 304 && responseCode != 306) {
                     String redirectedUrl = connection.getHeaderField("Location");
                     if (null == redirectedUrl)
                         break;
                     finalUrl = redirectedUrl;
-                    i += 1;  // 重定向次数加1
+                    i += 1;  // increment the number of redirects by 1
                     logger.info("redirected url: " + finalUrl);
                     if (i == checkTimes) {
                         return false;
@@ -92,27 +93,27 @@ public class SSRFChecker {
             } while (connection.getResponseCode() != HttpURLConnection.HTTP_OK);
             connection.disconnect();
         } catch (Exception e) {
-            return true;  // 如果异常了，认为是安全的，防止是超时导致的异常而验证不成功。
+            return true;  // If there is an exception, it is considered safe to prevent an exception caused by a timeout and the verification is unsuccessful.
         }
-        return true; // 默认返回true
+        return true; // returns true by default
     }
 
 
     /**
-     * 判断一个URL的IP是否是内网IP
+     * Determine whether the IP of a URL is an intranet IP
      *
-     * @return 如果是内网IP，返回true；非内网IP，返回false。
+     * @return If it is an intranet IP, return true; if it is not an intranet IP, return false.
      */
     public static boolean isInternalIpByUrl(String url) {
 
         String host = url2host(url);
         if (host.equals("")) {
-            return true; // 异常URL当成内网IP等非法URL处理
+            return true; // Abnormal URL is treated as illegal URL such as intranet IP
         }
 
         String ip = host2ip(host);
         if (ip.equals("")) {
-            return true; // 如果域名转换为IP异常，则认为是非法URL
+            return true; // If the domain name is abnormally converted to IP, it is considered an illegal URL
         }
 
         return isInternalIp(ip);
@@ -120,10 +121,10 @@ public class SSRFChecker {
 
 
     /**
-     * 使用SubnetUtils库判断ip是否在内网网段
+     * Use the SubnetUtils library to determine whether the ip is on the intranet segment
      *
-     * @param strIP ip字符串
-     * @return 如果是内网ip，返回true，否则返回false。
+     * @param strIP ip string
+     * @return Returns true if it is an intranet ip, otherwise returns false.
      */
     static boolean isInternalIp(String strIP) {
         if (StringUtils.isEmpty(strIP)) {
@@ -145,12 +146,12 @@ public class SSRFChecker {
     }
 
     /**
-     * host转换为IP
-     * 会将各种进制的ip转为正常ip
-     * 167772161 转换为  10.0.0.1
-     * 127.0.0.1.xip.io 转换为 127.0.0.1
+     * host to IP
+     * Convert various ip to normal ip
+     * 167772161 Convert various ip to normal ip  10.0.0.1
+     * 127.0.0.1.xip.io convert to 127.0.0.1
      *
-     * @param host 域名host
+     * @param host domain name host
      */
     private static String host2ip(String host) {
         try {
@@ -162,13 +163,13 @@ public class SSRFChecker {
     }
 
     /**
-     * 从URL中获取host，限制为http/https协议。只支持http:// 和 https://，不支持//的http协议。
+     * Get host from URL, limited to http/https protocol. Only supports http:// and https://, does not support the http protocol of //.
      *
-     * @param url http的url
+     * @param url http url
      */
     private static String url2host(String url) {
         try {
-            // 使用URI，而非URL，防止被绕过。
+            // Use a URI, not a URL, to prevent bypassing.
             URI u = new URI(url);
             if (SecurityUtil.isHttp(url)) {
                 return u.getHost();
