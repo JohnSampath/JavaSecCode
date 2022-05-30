@@ -3,15 +3,12 @@
 
 Java sec code is a very powerful and friendly project for learning Java vulnerability code.
 
-[中文文档](https://github.com/pchack93/java-sec-code/blob/master/README_zh.md)
 
 ## Introduce
 
 This project can also be called Java vulnerability code. 
 
 Each vulnerability type code has a security vulnerability by default unless there is no vulnerability. The relevant fix code is in the comments or code. Specifically, you can view each vulnerability code and comments.
-
-Due to the server expiration, the online demo site had to go offline.
 
 Login username & password:
 
@@ -52,7 +49,7 @@ Sort by letter.
 - [SSRF](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/controller/SSRF.java)
 - [SSTI](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/controller/SSTI.java)
 - [URL Redirect](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/controller/URLRedirect.java)
-- [URL whitelist Bypass](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/controller/URLWhiteList.java)
+- [URL whitelist Bypass](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/URLWhiteList.java)
 - [xlsxStreamerXXE](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/controller/othervulns/xlsxStreamerXXE.java)
 - [XSS](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/controller/XSS.java)
 - [XStream](https://github.com/pchack93/java-sec-code/blob/master/src/main/java/org/pchack/controller/XStreamRce.java)
