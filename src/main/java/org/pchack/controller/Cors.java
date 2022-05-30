@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * https://github.com/pchack93/java-sec-code/wiki/CORS
+ * https://github.com/JohnSampth/JavaSecCode/wiki/CORS
  */
 
 @RestController

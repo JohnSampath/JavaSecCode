@@ -14,7 +14,7 @@ import static org.springframework.web.util.WebUtils.getCookie;
 
 
 /**
- * 某些应用获取用户身份信息可能会直接从cookie中直接获取明文的nick或者id，导致越权问题。
+ * Some applications may obtain the user's identity information directly from the cookie, which may directly obtain the nick or id in plain text, resulting in the problem of unauthorized access.
  */
 @RestController
 @RequestMapping("/cookie")
