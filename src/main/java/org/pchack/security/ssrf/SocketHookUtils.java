@@ -8,7 +8,6 @@ class SocketHookUtils {
      * Poll the parent class to find the reflection method.
      * SocksSocketImpl -> PlainSocketImpl -> AbstractPlainSocketImpl
      *
-     * @author liergou @2020-04-04 01:43
      */
     static Method findMethod(Class<?> clazz, String findName, Class<?>[] args) {
 

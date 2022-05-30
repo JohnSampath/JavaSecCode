@@ -16,8 +16,6 @@ import java.util.regex.Pattern;
  * The vulnerability code and security code of Java url whitelist.
  * The security code is checking url whitelist.
  *
- * @author pchack (pchack@pchack.org)
- * @version 2018.08.23
  */
 
 @RestController
@@ -29,7 +27,7 @@ public class URLWhiteList {
     private static final Logger logger = LoggerFactory.getLogger(URLWhiteList.class);
 
     /**
-     * bypass poc: bypasspchack.org
+     * bypass poc: bypass pchack.org
      * http://localhost:8080/url/vuln/endswith?url=http://aaapchack.org
      */
     @GetMapping("/vuln/endsWith")
@@ -67,7 +65,7 @@ public class URLWhiteList {
 
 
     /**
-     * bypass poc: bypasspchack.org. It's the same with endsWith.
+     * bypass poc: bypass pchack.org. It's the same with endsWith.
      * http://localhost:8080/url/vuln/regex?url=http://aaapchack.org
      */
     @GetMapping("/vuln/regex")
@@ -91,7 +89,7 @@ public class URLWhiteList {
      * Bypass poc1: curl -v 'http://localhost:8080/url/vuln/url_bypass?url=http://evel.com%5c@www.pchack.org/a.html'
      * Bypass poc2: curl -v 'http://localhost:8080/url/vuln/url_bypass?url=http://evil.com%5cwww.pchack.org/a.html'
      * <p>
-     * More details: https://github.com/pchack93/java-sec-code/wiki/URL-whtielist-Bypass
+     * More details: https://github.com/JohnSampath/JavaSecCode/wiki/URL-whtielist-Bypass
      */
     @GetMapping("/vuln/url_bypass")
     public String url_bypass(String url) throws MalformedURLException {

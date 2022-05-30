@@ -44,7 +44,7 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
         content.put("code", "0");
         content.put("message", "Login success");
         content.put("redirectUrl", originUrl);
-        // 直接进行sendRedirect到登录前的url，会重定向失败。具体原因可google ajax and sendRedirect
+        // Directly sendRedirect to the url before login will fail the redirection. The specific reason can be google ajax and sendRedirect
         response.setContentType(MediaType.APPLICATION_JSON_VALUE);
         response.getWriter().write(JSON.toJSONString(content));
     }

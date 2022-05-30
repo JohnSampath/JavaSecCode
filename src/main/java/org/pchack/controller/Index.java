@@ -16,7 +16,6 @@ import java.util.Map;
 /**
  * Index page
  *
- * @author pchack @2018-05-28
  */
 @Controller
 public class Index {

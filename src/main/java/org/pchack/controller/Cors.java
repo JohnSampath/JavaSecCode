@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * @author pchack (pchack@pchack.org) @2018.10.24
  * https://github.com/pchack93/java-sec-code/wiki/CORS
  */
 
@@ -46,9 +45,9 @@ public class Cors {
 
 
     /**
-     * 重写Cors的checkOrigin校验方法
-     * 支持自定义checkOrigin，让其额外支持一级域名
-     * 代码：org/pchack/security/CustomCorsProcessor
+     * Rewrite Cors' checkOrigin verification method
+     * Support custom checkOrigin, let it additionally support first-level domain name
+     * Code: org/pchack/security/CustomCorsProcessor
      */
     @CrossOrigin(origins = {"pchack.org", "http://test.pchack.me"})
     @GetMapping("/sec/crossOrigin")
@@ -58,9 +57,9 @@ public class Cors {
 
 
     /**
-     * WebMvcConfigurer设置Cors
-     * 支持自定义checkOrigin
-     * 代码：org/pchack/config/CorsConfig.java
+     * WebMvcConfigurer set Cors
+     * Support custom checkOrigin
+     * Code: org/pchack/config/CorsConfig.java
      */
     @GetMapping("/sec/webMvcConfigurer")
     public CsrfToken getCsrfToken_01(CsrfToken token) {
@@ -69,9 +68,9 @@ public class Cors {
 
 
     /**
-     * spring security设置cors
-     * 不支持自定义checkOrigin，因为spring security优先于setCorsProcessor执行
-     * 代码：org/pchack/security/WebSecurityConfig.java
+     * spring security set cors
+     * Custom checkOrigin is not supported because spring security takes precedence over setCorsProcessor execution
+     * Code： org/pchack/security/WebSecurityConfig.java
      */
     @GetMapping("/sec/httpCors")
     public CsrfToken getCsrfToken_02(CsrfToken token) {
@@ -80,9 +79,9 @@ public class Cors {
 
 
     /**
-     * 自定义filter设置cors
-     * 支持自定义checkOrigin
-     * 代码：org/pchack/filter/OriginFilter.java
+     * Custom filter settings cors
+     * Support custom checkOrigin
+     * Code: org/pchack/filter/OriginFilter.java
      */
     @GetMapping("/sec/originFilter")
     public CsrfToken getCsrfToken_03(CsrfToken token) {
@@ -91,9 +90,9 @@ public class Cors {
 
 
     /**
-     * CorsFilter设置cors。
-     * 不支持自定义checkOrigin，因为corsFilter优先于setCorsProcessor执行
-     * 代码：org/pchack/filter/BaseCorsFilter.java
+     * CorsFilter sets cors.
+     * Custom checkOrigin is not supported because corsFilter takes precedence over setCorsProcessor execution
+     * Code：org/pchack/filter/BaseCorsFilter.java
      */
     @RequestMapping("/sec/corsFilter")
     public CsrfToken getCsrfToken_04(CsrfToken token) {
@@ -105,8 +104,8 @@ public class Cors {
     public String seccode(HttpServletRequest request, HttpServletResponse response) {
         String origin = request.getHeader("Origin");
 
-        // 如果origin不为空并且origin不在白名单内，认定为不安全。
-        // 如果origin为空，表示是同域过来的请求或者浏览器直接发起的请求。
+        // If origin is not empty and origin is not in the whitelist, it is considered unsafe.
+        // If origin is empty, it means that it is a request from the same domain or a request directly initiated by the browser.
         if (origin != null && SecurityUtil.checkURL(origin) == null) {
             return "Origin is not safe.";
         }

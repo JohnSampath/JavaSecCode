@@ -16,7 +16,6 @@ import org.slf4j.LoggerFactory;
 /**
  * It is recommended to use this global solution to fix the Cors cross-domain vulnerability, because the first-level domain name can be verified.
  *
- * @author pchack @ 2019.12.19
  */
 @WebFilter(filterName = "OriginFilter", urlPatterns = "/cors/sec/originFilter")
 public class OriginFilter implements Filter {

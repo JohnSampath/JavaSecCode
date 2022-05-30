@@ -17,9 +17,10 @@ public class Fastjson {
     @RequestMapping(value = "/deserialize", method = {RequestMethod.POST})
     @ResponseBody
     public String Deserialize(@RequestBody String params) {
-        // 如果Content-Type不设置application/json格式，post数据会被url编码
+        // If the Content-Type is not set to application/json format, the post data will be url encoded
+
         try {
-            // 将post提交的string转换为json
+            // Convert the string submitted by post to json
             JSONObject ob = JSON.parseObject(params);
             return ob.get("name").toString();
         } catch (Exception e) {

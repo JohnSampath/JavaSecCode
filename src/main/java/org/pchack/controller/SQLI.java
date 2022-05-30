@@ -17,7 +17,6 @@ import java.util.List;
 /**
  * SQL Injection
  *
- * @author pchack @2018.08.22
  */
 
 @SuppressWarnings("Duplicates")
@@ -26,7 +25,7 @@ import java.util.List;
 public class SQLI {
 
     private static Logger logger = LoggerFactory.getLogger(SQLI.class);
-    private static String driver = "com.mysql.jdbc.Driver";
+    private static String driver = "org.h2.Driverr";
 
     @Value("${spring.datasource.url}")
     private String url;

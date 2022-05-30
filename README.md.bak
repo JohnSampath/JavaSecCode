@@ -23,9 +23,17 @@ pchack/pchack123
 Sort by letter.
 
 - [Actuators to RCE](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/resources/logback-online.xml)
+<<<<<<< Updated upstream
+- [CommandInject](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/CommandInject.java)
 - [CORS](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/Cors.java)
+- [CRLF Injection](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/CRLFInjection.java)
+=======
+- [CORS](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/Cors.java)
+>>>>>>> Stashed changes
 - [CSRF](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/security/WebSecurityConfig.java)
 - [GetRequestURI](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/GetRequestURI.java)
+- [Log4j](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/Log4j.java)
+- [SpEL](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/SpEL.java)
 - [SQL Injection](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/SQLI.java)
 - [SSTI](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/SSTI.java)
 - [SSRF](https://github.com/JohnSampath/JavaSecCode/blob/master/src/main/java/org/pchack/controller/SSRF.java)
@@ -40,6 +48,7 @@ Sort by letter.
 - [Actuators to RCE](https://github.com/JohnSampath/JavaSecCode/wiki/Actuators-to-RCE)
 - [CORS](https://github.com/JohnSampath/JavaSecCode/wiki/CORS)
 - [CSRF](https://github.com/JohnSampath/JavaSecCode/wiki/CSRF)
+- [Deserialize](https://github.com/JohnSampath/JavaSecCode/wiki/Deserialize)
 - [SQLI](https://github.com/JohnSampath/JavaSecCode/wiki/SQL-Inject)
 - [SSRF](https://github.com/JohnSampath/JavaSecCode/wiki/SSRF)
 - [SSTI](https://github.com/JohnSampath/JavaSecCode/wiki/SSTI)

@@ -31,7 +31,6 @@ import org.pchack.util.WebUtils;
 /**
  * Java xxe vuln and security code.
  *
- * @author pchack @2017-12-22
  */
 
 @RestController
@@ -226,7 +225,7 @@ public class XXE {
     }
 
 
-    // 有回显
+    // with echo
     @RequestMapping(value = "/DocumentBuilder/vuln01", method = RequestMethod.POST)
     public String DocumentBuilderVuln01(HttpServletRequest request) {
         try {
@@ -238,7 +237,7 @@ public class XXE {
             InputSource is = new InputSource(sr);
             Document document = db.parse(is);  // parse xml
 
-            // 遍历xml节点name和value
+            // Traverse xml node name and value
             StringBuilder buf = new StringBuilder();
             NodeList rootNodeList = document.getChildNodes();
             for (int i = 0; i < rootNodeList.getLength(); i++) {
@@ -258,7 +257,7 @@ public class XXE {
     }
 
 
-    // 有回显
+    // with echo
     @RequestMapping(value = "/DocumentBuilder/vuln02", method = RequestMethod.POST)
     public String DocumentBuilderVuln02(HttpServletRequest request) {
         try {
@@ -271,7 +270,7 @@ public class XXE {
             InputSource is = new InputSource(sr);
             Document document = db.parse(is);  // parse xml
 
-            // 遍历xml节点name和value
+            // Traverse xml node name and value
             StringBuilder result = new StringBuilder();
             NodeList rootNodeList = document.getChildNodes();
             for (int i = 0; i < rootNodeList.getLength(); i++) {
@@ -279,7 +278,7 @@ public class XXE {
                 NodeList child = rootNode.getChildNodes();
                 for (int j = 0; j < child.getLength(); j++) {
                     Node node = child.item(j);
-                    // 正常解析XML，需要判断是否是ELEMENT_NODE类型。否则会出现多余的的节点。
+                    // To parse XML normally, you need to determine whether it is of ELEMENT_NODE type. Otherwise, redundant nodes will appear.
                     if (child.item(j).getNodeType() == Node.ELEMENT_NODE) {
                         result.append(String.format("%s: %s\n", node.getNodeName(), node.getFirstChild()));
                     }
@@ -324,8 +323,8 @@ public class XXE {
             logger.info(body);
 
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-            dbf.setXIncludeAware(true);   // 支持XInclude
-            dbf.setNamespaceAware(true);  // 支持XInclude
+            dbf.setXIncludeAware(true);   // support XInclude
+            dbf.setNamespaceAware(true);  // support XInclude
             DocumentBuilder db = dbf.newDocumentBuilder();
             StringReader sr = new StringReader(body);
             InputSource is = new InputSource(sr);
@@ -350,8 +349,8 @@ public class XXE {
             logger.info(body);
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 
-            dbf.setXIncludeAware(true);   // 支持XInclude
-            dbf.setNamespaceAware(true);  // 支持XInclude
+            dbf.setXIncludeAware(true);   // support XInclude
+            dbf.setNamespaceAware(true);  // support XInclude
             dbf.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
             dbf.setFeature("http://xml.org/sax/features/external-general-entities", false);
             dbf.setFeature("http://xml.org/sax/features/external-parameter-entities", false);
@@ -416,8 +415,8 @@ public class XXE {
 
 
     /**
-     * 修复该漏洞只需升级dom4j到2.1.1及以上，该版本及以上禁用了ENTITY；
-     * 不带ENTITY的PoC不能利用，所以禁用ENTITY即可完成修复。
+     * To fix this vulnerability, you only need to upgrade dom4j to 2.1.1 and above, and ENTITY is disabled in this version and above;
+     * PoC without ENTITY cannot be exploited, so disabling ENTITY will complete the fix.
      */
     @PostMapping("/DocumentHelper/vuln")
     public String DocumentHelper(HttpServletRequest req) {
@@ -439,7 +438,7 @@ public class XXE {
             NodeList xxe = rootNode.getChildNodes();
             for (int j = 0; j < xxe.getLength(); j++) {
                 Node xxeNode = xxe.item(j);
-                // 测试不能blind xxe，所以强行加了一个回显
+                // The test cannot blind xxe, so an echo is forcibly added
                 logger.info("xxeNode: " + xxeNode.getNodeValue());
             }
 
