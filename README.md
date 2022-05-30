@@ -70,7 +70,7 @@ Sort by letter.
 - [SQLI](https://github.com/pchack93/java-sec-code/wiki/SQL-Inject)
 - [SSRF](https://github.com/pchack93/java-sec-code/wiki/SSRF)
 - [SSTI](https://github.com/pchack93/java-sec-code/wiki/SSTI)
-- [URL whitelist Bypass](https://github.com/pchack93/java-sec-code/wiki/URL-whtielist-Bypass)
+- [URL whitelist Bypass]([https://github.com/pchack93/java-sec-code/wiki/URL-whtielist-Bypass](https://github.com/JohnSampath/JavaSecCode/wiki/URL-whitelist-Bypass))
 - [XXE](https://github.com/pchack93/java-sec-code/wiki/XXE)
 - [Others](https://github.com/pchack93/java-sec-code/wiki/others)
 
