@@ -191,19 +191,3 @@ pchack/pchack123
 
 Tomcat's default JSESSION session is valid for 30 minutes, so a 30-minute non-operational session will expire. In order to solve this problem, the rememberMe function is introduced, and the default expiration time is 2 weeks.
 
-
-## Contributors
-
-Core developers : [pchack](https://github.com/pchack93), [liergou9981](https://github.com/liergou9981)
-Other developers: [lightless](https://github.com/lightless233),  [Anemone95](https://github.com/Anemone95), [waderwu](https://github.com/waderwu). 
-
-
-## Donate
-
-If you like the poject, you can donate to support me. With your support, I will be able to make `Java sec code` better 😎.
-
-### Alipay
-
-Scan the QRcode to support `Java sec code`.
-
-<img title="Alipay QRcode" src="https://aliyun-testaaa.oss-cn-shanghai.aliyuncs.com/alipay_qr.png" width="200">
